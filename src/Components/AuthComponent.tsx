@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import axios from "axios";
+import {ListFriend} from "./ListFriend";
 
 interface IFormReg {
     login: string,
@@ -13,7 +14,15 @@ interface IPropsLogIn {
 }
 
 export let token:string = ''
+let storageToken = localStorage.getItem('token')
+let storageNick = localStorage.getItem('nick')
 let nick:string = ''
+if (storageToken!=undefined&&storageNick!=undefined){
+    token=storageToken
+    nick=storageNick
+
+}
+
 
 export function AuthComponent() {
     const [registerForm, setRegisterForm] = useState(false)
@@ -23,7 +32,7 @@ export function AuthComponent() {
     const [nickname, setNickname] = useState('')
     const [loginInput, setLoginInput] = useState('')
     const [passwordInput, setPasswordInput] = useState('')
-    const [isAuth,setIsAuth] = useState(false)
+    const [isAuth,setIsAuth] = useState(token!='')
 
     function check(event: React.FormEvent) {
         event.preventDefault()
@@ -39,16 +48,20 @@ export function AuthComponent() {
         setRegisterForm(prev => !prev)
     }
 
+
     async function LoginIn(login: string, password: string) {
 
         const response = await axios.post(`https://localhost:44372/token?username=${login}&password=${password}`)
 
+
+
         console.log(response.data)
-        token+=response.data
+        token=response.data
         console.log()
-        nick+=(await getNickName()).data
+        nick=(await getNickName()).data
         localStorage.setItem('token',response.data)
         localStorage.setItem('nick',nick)
+
         setIsAuth(prev=>!prev)
         setLoginForm(prev => !prev)
     }
@@ -94,9 +107,11 @@ export function AuthComponent() {
             }
             {
                 isAuth&&<div className="nick">
-                     {nick}
+                    <div className='logOut'>{nick}</div><button onClick={()=>setIsAuth(false)}>Log out</button>
                 </div>
+
             }
+            {isAuth&&<ListFriend></ListFriend>}
         </>
     )
 }

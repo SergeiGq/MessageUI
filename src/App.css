@@ -1,42 +1,427 @@
 *{
+    font-family: 'SF Pro Display';
+}
+.contacts__block {
+    display: flex;
+    flex-direction: column;
+    width: 337px;
+    padding: 27px 0px 0px 0px;
 
 }
-.Auth{
-  display: flex;
-  justify-content: flex-end;
+
+.auth__block {
+    width: 54px;
+    background: #FAFAFA;;
 }
-.Log_In{
+
+.contacts__title {
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 16px;
+    margin: 0px 25px 0 21px;
+}
+
+.messages__block {
+    height: 100vh;
+    background: tan;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 
 }
-.Register{
-  margin-right:50px ;
-}
-.regForm{
-  font-size: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.itemReg{
-  padding-bottom: 20px;
-}
-.TitleReg{
-  font-size: 50px;
-  padding-bottom: 50px;
-}
-.input_reg{
-  margin-bottom: 40px;
-}
-.regButton{
+
+.contacts__sort__by {
+
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: rgba(0, 0, 0, 0.65);
+    padding: 0px 8px;
+
 
 }
-.nick{
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 200px;
-color: orange;
-  font-size: 23px;
+
+.contacts__newest {
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #2D9CDB;
+    padding-right: 7px;
 }
-.styleNick{
-  color: orange;
+
+.contacts__newest:hover {
+    cursor: pointer;
 }
+
+.contacts__sort {
+    display: flex;
+    align-items: center;
+    margin: 0px 25px 5px 21px;
+
+}
+
+@font-face {
+    font-family: 'SF Pro Text';
+    src: url(/public/fonts/SF-Pro-Text-Regular.otf) format("opentype");
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url(/public/fonts/SFPRODISPLAYREGULAR.OTF) format("opentype");
+}
+.contacts__search{
+    margin: 0px 25px 0 21px;
+}
+.contacts__search input {
+
+    display: flex;
+    width: 241px;
+    flex-direction: row;
+    flex:1 1 auto;
+    align-items: center;
+    margin: 18px 0px 11px 0px;
+    border: none;
+    padding: 10px 12px 10px 38px;
+    gap: 16px;
+    caret-color: green;
+    border-radius: 12px;
+
+    background: #eee url("/public/Img/Shape.png") no-repeat;
+    background-size: 13px;
+    background-position-x: 12px;
+    background-position-y: center;
+}
+
+.contacts__search input:focus-visible {
+    outline: none;
+}
+
+.contacts__list {
+    padding-top: 13px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-y: scroll;
+    gap: 16px;
+}
+
+
+
+.contacts__user {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+.contacts__user__active {
+    display: flex;
+    align-items: center;
+    background: #2D9CDB;
+}
+
+.contacts__user:hover {
+    background-color: #2D9CDB;
+
+}
+
+.contacts__name__last__message {
+    display: flex;
+    flex-direction: column;
+    padding-left: 12px;
+
+}
+
+.contacts__name {
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: rgba(0, 0, 0, 0.85);
+}
+
+.contacts__last__message {
+    width: 178px;
+    height: 16px;
+
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    /* identical to box height, or 114% */
+
+
+    color: rgba(0, 0, 0, 0.45);
+}
+
+.contacts__time__status {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right:25px ;
+
+
+}
+.contacts__user__left{
+    display: flex;
+    margin-left:21px ;
+
+}
+
+.contacts__time {
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+    color: rgba(0, 0, 0, 0.45);
+
+}
+
+.contacts__status {
+
+}
+
+
+.main {
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: stretch;
+    justify-content: space-evenly;
+    align-items: stretch;
+    height: 100vh;
+}
+
+.navigation__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+
+.navigation__emblem {
+    padding-top: 27px;
+}
+
+.navigation__profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigation__emblem {
+
+}
+
+.navigation__logout:hover {
+    cursor: pointer;
+
+}
+
+.navigation__foto__profile {
+    padding-top: 20px;
+}
+
+.messages__title {
+
+
+    padding: 8px;
+
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #EEEEEE;
+}
+
+.messages__container__prof {
+    display: flex;
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    align-items: center;
+}
+
+.messages__info__profile {
+    display: flex;
+    padding-left: 12px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 0px;
+
+}
+
+.messages__nickname {
+    ont-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    /* identical to box height, or 100% */
+
+
+    color: rgba(0, 0, 0, 0.85);
+}
+
+.messages__status__prof {
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    padding-top: 4px;
+    /* identical to box height, or 114% */
+
+
+    /* Green 2 */
+
+    color: #27AE60;
+
+}
+
+.mes_foto_user {
+    padding-left: 12px;
+}
+
+.messages__container__main {
+    background: #FAFAFA;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-y: scroll;
+    padding: 25px 18px 25px 25px;
+    border: 1px solid #EEEEEE;
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+
+    /* black/85 */
+
+    color: rgba(0, 0, 0, 0.85);
+
+
+}
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: blue orange;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 7px;
+
+}
+
+*::-webkit-scrollbar-track {
+
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #808080;
+    border-radius: 20px;
+
+}
+
+.messages__container__main__end {
+    background: white;
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+    border-left: 1px solid #EEEEEE;
+    height: 48px;
+}
+
+.messages__container__main__end input {
+
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-left: 28px;
+    border-radius: 12px;
+    font-size: 14px;
+    border: 0px;
+    background: #FAFAFA;
+    padding: 10px 12px 10px 12px;
+    caret-color: green;
+    width: 100%;
+
+
+}
+
+.messages__container__main__end input:focus {
+    outline: none;
+
+}
+
+
+.message__send {
+    font-family: 'SF Pro Display';
+
+
+    font-size: 14px;
+    line-height: 17px;
+    color: #27AE60;
+    margin: 0px 28px;
+    width: 101px;
+
+
+}
+
+.message__send:hover {
+    cursor: pointer;
+}
+
+.message__items__normal {
+    display: flex;
+
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 18px 6px;
+    margin-bottom: 4px;
+    gap: 4px;
+    height: 55px;
+    width: auto;
+    background: #F4F4F7;
+    border-radius: 16px;
+
+}
+
+.message__items__end {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 18px 6px;
+    gap: 4px;
+    height: 55px;
+    width: auto;
+    background: #F4F4F7;
+    border-radius: 16px;
+    align-self: end;
+    margin-bottom: 4px;
+
+}
+
+
