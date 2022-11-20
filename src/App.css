@@ -226,7 +226,9 @@
 .navigation__emblem {
 
 }
-
+.navigation__logout{
+    margin-bottom: 15px;
+}
 .navigation__logout:hover {
     cursor: pointer;
 
