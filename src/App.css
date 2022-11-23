@@ -131,6 +131,7 @@
 .contacts__user:hover {
     background-color: #2D9CDB;
 
+
 }
 
 .contacts__name__last__message {
@@ -228,6 +229,114 @@
 }
 .navigation__logout{
     margin-bottom: 15px;
+}
+.container__auth__nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+
+}
+.navigation__logIn{
+   padding-bottom: 30px;
+
+}
+.Log__Form{
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+
+
+    position: absolute;
+    width: 458px;
+    height: 500px;
+    left: 732px;
+    top: 150px;
+    background: deepskyblue;
+}
+.Text__LogIn{
+   margin-left: 8px;
+}
+.reg__and__logIn{
+    padding-top: 88px;
+    font-size: 21px;
+    display: flex;
+    padding-left: 92px;
+}
+.reg__form{
+    padding-left:92px ;
+    padding-top: 39px;
+    display: flex;
+    flex-direction: column;
+}
+.logIn__form{
+    padding-left:92px ;
+    padding-top: 39px;
+    display: flex;
+    flex-direction: column;
+}
+.reg__nickname{
+    padding-bottom: 9px;
+}
+.reg__login{
+    padding-bottom: 9px;
+}
+.Text__Reg:hover{
+    background: #27AE60;
+    cursor: pointer;
+}
+.reg__password{
+    padding-bottom: 45px;
+}
+.reg__form button{
+    width: 273px;
+
+    height: 40px;
+    background: #F8F1FF;
+    border-radius: 7px;
+}
+.logIn__form button{
+    width: 273px;
+
+    height: 40px;
+    background: #F8F1FF;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.Text__LogIn:hover{
+    background: #27AE60;
+    cursor: pointer;
+
+
+}
+.reg__form button:hover{
+    background: #27AE60;
+    cursor: pointer;
+}
+.logIn__form button:hover{
+    background: #27AE60;
+}
+.reg__form input{
+    width: 273px;
+
+    height: 40px;
+    background: #F8F1FF;
+    border-radius: 7px;
+
+}
+.logIn__form input{
+    width: 273px;
+
+    height: 40px;
+    background: #F8F1FF;
+    border-radius: 7px;
+}
+.reg__nickname{
+
+}
+.navigation__logIn:hover{
+    cursor: pointer;
 }
 .navigation__logout:hover {
     cursor: pointer;
@@ -394,6 +503,12 @@
 
 .message__send:hover {
     cursor: pointer;
+    background: #2D9CDB;
+    height: 100%;
+    color:wheat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .message__items__normal {

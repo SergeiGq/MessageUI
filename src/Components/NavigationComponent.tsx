@@ -1,7 +1,18 @@
-import React from "react";
+import React, {useState} from "react";
+import {AuthComponent} from "../AdditionalComponents/AuthComponent";
+import store from "../Redux/store";
+import {AuthChanges} from "../Redux/AuthState";
+
 
 export  function NavigationComponent(){
+    const [auth,setAuth] = useState(false)
+    store.dispatch(AuthChanges(true))
+    function setAuthState(state:boolean){
+        setAuth(prev=>!prev)
+
+    }
     return(
+        <>
         <div className="navigation__block">
             <div className="navigation__profile">
                 <div className="navigation__emblem"><svg width="30" height="20" viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -11,8 +22,12 @@ export  function NavigationComponent(){
                 <div className="navigation__foto__profile"><img src="/Img/FotoUser.png"/></div>
 
             </div>
+            <div className="container__auth__nav">
+            <div className="navigation__logIn" onClick={()=>setAuthState(store.getState().Auth)}><img src="/Img/LogIn.png"/></div>
             <div className="navigation__logout"><img src="/Img/LogOut.png"/></div>
-
+            </div>
         </div>
+    {auth&&<AuthComponent></AuthComponent>}
+        </>
     )
 }

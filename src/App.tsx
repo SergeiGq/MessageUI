@@ -1,8 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {AuthComponent, token} from "./Components/AuthComponent";
-import {ListFriend} from "./Components/ListFriend";
+
 import {NavigationComponent} from "./Components/NavigationComponent";
 import {ContactComponent} from "./Components/ContactComponent";
 import {MessageComponent} from "./Components/MessageComponent";

@@ -24,9 +24,9 @@ export function ContactComponent() {
                 </svg>
             </div>
 
-            <div className="contacts__list">{[...Array(10)].map((x, i) => <div className="contacts__user">
+            <div className="contacts__list">{[...Array(19)].map((x, i) => <div className="contacts__user">
 
-                <div className="contacts__user__left" key={i}>
+                <div className="contacts__user__left">
                     <img src="/Img/FotoUser.png"></img>
                     <div className="contacts__name__last__message">
                         <div className="contacts__name">John Doe</div>
